@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     const response = await axios.get(`https://www.reddit.com/r/memes.json?after=${page}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
-        'User-Agent': 'your-app-name' // replace 'your-app-name' with the name of your app
+        'User-Agent': 'nextjs-react-meme-gallery' 
       }
     });
     res.status(200).json(response.data);
