@@ -4,8 +4,6 @@ import axios from "axios";
 import { PhotoSwipe } from "react-photoswipe";
 import styles from "@/styles/Home.module.css";
 
-const express = require("express"); const app = express(); app.get("/", (req, res) => { res.send("Express on Vercel"); }); const PORT = process.env.PORT || 5000; app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`); });
-
 const Home = () => {
   const [memes, setMemes] = useState([]);
   const [page, setPage] = useState(1);
@@ -18,7 +16,7 @@ const Home = () => {
   const fetchMemes = async () => {
     try {
        setLoading(true);
-       const response = await axios.get(`https://www.reddit.com/r/memes.json?after=${page}`);
+       const response = await axios.get(`/api/memes?after=${page}`);
        if (!response.data.data.after) {
          // No more memes to load
          return;
