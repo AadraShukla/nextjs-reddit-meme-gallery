@@ -2,9 +2,8 @@ import axios from 'axios';
 import * as oauth from 'oauth';
 
 const oauth2 = new oauth.OAuth2(
-  
-  "JEYiCqBee5kcJ5JZWWNOyA",
-  "F48mbkQFpbrAUQujEObgKSMdzwslDQ", 
+  process.env.REDDIT_CLIENT_ID,
+  process.env.REDDIT_CLIENT_SECRET,
  'https://www.reddit.com/', // base URL
   null, // authorization path
  'https://www.reddit.com/api/v1/access_token' // token path
