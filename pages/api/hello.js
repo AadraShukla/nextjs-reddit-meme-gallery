@@ -9,7 +9,7 @@ const oauth2 = new oauth.OAuth2(
  'https://www.reddit.com/api/v1/access_token' // token path
 );
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
  try {
     const { page } = req.query;
     oauth2.getOAuthAccessToken((err, token) => {
