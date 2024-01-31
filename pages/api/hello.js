@@ -3,7 +3,7 @@ import * as oauth from 'oauth';
 
 const oauth2 = new oauth.OAuth2(
   process.env.F48mbkQFpbrAUQujEObgKSMdzwslDQ, 
-  process.env.JEYiCqBee5kcJ5JZWWNOyA
+  process.env.JEYiCqBee5kcJ5JZWWNOyA,
  'https://www.reddit.com/', // base URL
  null, // authorization path
  'https://www.reddit.com/api/v1/access_token' // token path
