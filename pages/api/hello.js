@@ -21,7 +21,7 @@ export default function handler(req, res) {
       axios.get(`https://www.reddit.com/r/memes.json?after=${page}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
-          'User-Agent': 'nextjs-react-meme-gallery' 
+          'User-Agent': 'nextjs-meme-gallery' 
         }
       }).then(response => {
         res.status(200).json(response.data);
