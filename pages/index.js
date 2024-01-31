@@ -16,7 +16,7 @@ const Home = () => {
   const fetchMemes = async () => {
     try {
        setLoading(true);
-       const response = await axios.get(`/api/memes?after=${page}`);
+       const response = await axios.get(`/api/hello?after=${page}`);
        if (!response.data.data.after) {
          // No more memes to load
          return;
